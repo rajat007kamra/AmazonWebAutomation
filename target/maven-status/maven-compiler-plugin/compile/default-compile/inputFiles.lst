@@ -1,0 +1,16 @@
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/base/BaseTest.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/config/ConfigReader.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/dataproviders/TestDataProvider.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/driver/DriverFactory.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/listeners/RetryAnalyzer.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/listeners/TestListener.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/pages/CartPage.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/pages/HomePage.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/pages/LoginPage.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/pages/ProductDetailPage.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/pages/SearchResultsPage.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/reports/ExtentManager.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/reports/ExtentTestManager.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/utils/BrowserInfoUtil.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/utils/LogUtil.java
+/Users/rajat.kamra/Downloads/AmazonWebAutomation/src/main/java/com/amazon/webautomation/utils/ScreenshotUtil.java

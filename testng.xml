@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Amazon Web Automation Suite">
+    <listeners>
+        <listener class-name="com.amazon.webautomation.listeners.TestListener"/>
+    </listeners>
+
+    <test name="All Functional Tests">
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.amazon.webautomation.HomePageTest"/>
+<!--            <class name="com.amazon.webautomation.CartTest"/>-->
+<!--            <class name="com.amazon.webautomation.ProductDetailPageTest"/>-->
+<!--            <class name="com.amazon.webautomation.EndToEndTest"/>-->
+        </classes>
+    </test>
+</suite>
