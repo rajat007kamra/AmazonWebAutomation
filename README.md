@@ -31,10 +31,6 @@ AmazonWebAutomation/
 ├── README.md # Project Documentation
 └── pom.xml # Maven build config
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 🚀 Key Features
@@ -78,68 +74,49 @@ Edit
 
 ## 🏗️ How to Run
 
-### 1. Clone the repo
+### 1. Clone the repo:
 
 ```bash
 git clone https://github.com/your-username/AmazonWebAutomationLatest.git
 cd AmazonWebAutomationLatest
-2. Install dependencies
-bash
-Copy
-Edit
+
+2. Install dependencies:
 mvn clean install
-3. Run tests via Maven
-bash
-Copy
-Edit
+
+3. Run tests via Maven:
 mvn test -DsuiteXmlFile=testng.xml
 or for parallel execution:
-
-bash
-Copy
-Edit
 mvn test -DsuiteXmlFile=parallelTestng.xml
-📸 Reports & Logs
+
+📸 Reports & Logs:
+
 After execution, find:
-
 📁 test-output/ExtentReports/
-
 index.html – Full clickable report
-
 /screenshots/ – Screenshot images
 
 📁 logs/ (if added later)
 
 ✅ Sample Console Output
-bash
-Copy
-Edit
+
 Test Case 1 :: Executing HomePageTest -> verifyHomePageElements
 Test Case 2 :: Executing CartTest -> verifyCartFunctionality
 Test Case 3 :: Executing ProductDetailPageTest -> verifyProductDetails
+
 🧪 Jenkins Integration
 Uses JenkinsFile.groovy
 
 You can configure your pipeline to:
-
-Checkout repo
-
-Install dependencies
-
-Run test suite
-
-Archive reports and screenshots
-
-✏️ Customize ExtentReports
-Change extent-config.xml to update:
-
-Theme (dark/light)
-
-Report title
-
-Timestamp format
-
-Chart visibility
+1. Check out the repo
+2. Install dependencies
+3. Run test suite
+4. Archive reports and screenshots
+5.✏️ Customize ExtentReports
+6. Change extent-config.xml to update:
+7 .Theme (dark/light)
+8 . Report title
+9. Timestamp format
+10. Chart visibility
 
 🧠 Author
 👨‍💻 Rajat Kamra
