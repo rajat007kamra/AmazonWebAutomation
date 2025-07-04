@@ -6,6 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class DriverFactory {
 
@@ -28,8 +31,21 @@ public class DriverFactory {
                 tlDriver.set(new EdgeDriver(edgeOptions));
                 break;
 
+            case "firefox":
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                if (isHeadless) firefoxOptions.addArguments("--headless", "--width=1920", "--height=1080");
+                tlDriver.set(new FirefoxDriver(firefoxOptions));
+                break;
+
+            case "safari":
+                if (isHeadless) {
+                    throw new UnsupportedOperationException("Safari does not support headless mode.");
+                }
+                tlDriver.set(new SafariDriver());
+                break;
+
             default:
-                throw new RuntimeException(" Unsupported browser: " + browser);
+                throw new RuntimeException("❌ Unsupported browser: " + browser);
         }
 
         return getDriver();
