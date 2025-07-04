@@ -1,0 +1,6 @@
+{
+  "verifySearchAndCartFlowWithOptionalLogin": [
+    { "username": "testuser1@amazon.com" },
+    { "username": "testuser2@amazon.com" }
+  ]
+}

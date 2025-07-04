@@ -2,12 +2,15 @@ package com.amazon.webautomation;
 
 import com.amazon.webautomation.base.BaseTest;
 import com.amazon.webautomation.config.ConfigReader;
+import com.amazon.webautomation.dataproviders.JsonDataProvider;
 import com.amazon.webautomation.pages.HomePage;
 import com.amazon.webautomation.pages.SearchResultsPage;
 import com.amazon.webautomation.utils.LogUtil;
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.Map;
 
 public class HomePageTest extends BaseTest {
 
@@ -27,14 +30,17 @@ public class HomePageTest extends BaseTest {
         LogUtil.endSection();
     }
 
-    @Test(groups = {"sanity"}, description = "Verify product search functionality")
-    public void verifyProductSearchFunctionality() {
+    @Test(groups = {"sanity"}, description = "Verify product search functionality", dataProvider = "jsonDataProvider", dataProviderClass = JsonDataProvider.class
+    )
+    public void verifyProductSearchFunctionality(Map<String, String> data) {
         driver.get(ConfigReader.get("baseUrl"));
         LogUtil.startSection("Search Functionality");
 
+        String productName = data.get("productName");
+
         HomePage homePage = new HomePage();
-        homePage.enterSearchText("laptop");
-        LogUtil.logStep(Status.INFO, "Entered product name: laptop", false);
+        homePage.enterSearchText(productName);
+        LogUtil.logStep(Status.INFO, "Entered product name: " + productName, false);
 
         homePage.clickSearchButton();
         LogUtil.logStep(Status.INFO, "Clicked on search button", true);

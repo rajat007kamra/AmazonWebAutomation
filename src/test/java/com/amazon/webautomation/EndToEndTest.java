@@ -2,18 +2,24 @@ package com.amazon.webautomation;
 
 import com.amazon.webautomation.base.BaseTest;
 import com.amazon.webautomation.config.ConfigReader;
+import com.amazon.webautomation.dataproviders.JsonDataProvider;
 import com.amazon.webautomation.pages.*;
 import com.amazon.webautomation.utils.LogUtil;
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.Map;
+
 public class EndToEndTest extends BaseTest {
 
-    @Test(groups = {"smoke", "sanity"}, description = "Optionally login → Search → Add to Cart → Verify Cart",
-            dataProvider = "loginTestData",
-            dataProviderClass = com.amazon.webautomation.dataproviders.TestDataProvider.class)
-    public void verifySearchAndCartFlowWithOptionalLogin(String username) {
+    @Test(groups = {"smoke", "sanity"},
+            description = "Optionally login → Search → Add to Cart → Verify Cart",
+            dataProvider = "jsonDataProvider",
+            dataProviderClass = JsonDataProvider.class)
+    public void verifySearchAndCartFlowWithOptionalLogin(Map<String, String> data) {
+
+        String username = data.get("username"); // ✅ Get username from JSON data
 
         // 📂 Section: Navigation
         LogUtil.startSection("Navigation");

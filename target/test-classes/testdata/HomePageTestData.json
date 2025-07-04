@@ -1,0 +1,13 @@
+{
+  "verifyProductSearchFunctionality": [
+    {
+      "productName": "laptop"
+    },
+    {
+      "productName": "headphones"
+    },
+    {
+      "productName": "smartphone"
+    }
+  ]
+}
