@@ -11,10 +11,10 @@
             </run>
         </groups>
         <classes>
-<!--            <class name="com.amazon.webautomation.HomePageTest"/>-->
+            <class name="com.amazon.webautomation.HomePageTest"/>
 <!--            <class name="com.amazon.webautomation.CartTest"/>-->
 <!--            <class name="com.amazon.webautomation.ProductDetailPageTest"/>-->
-            <class name="com.amazon.webautomation.EndToEndTest"/>
+<!--            <class name="com.amazon.webautomation.EndToEndTest"/>-->
         </classes>
     </test>
 </suite>
