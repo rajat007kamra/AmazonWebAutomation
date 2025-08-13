@@ -1,0 +1,32 @@
+# Maven build directory
+target/
+
+# IntelliJ IDEA project files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Test output
+test-output/
+output.json
+parallelTestng.xml
+src/test/resources/firebase/
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+
+# OS-specific files
+Thumbs.db
+.DS_Store
+
+# Scratch files
+../../Library/Application Support/JetBrains/IdeaIC2022.1/scratches/scratch.json
+
+# Local configuration
+*.properties
+*.env
