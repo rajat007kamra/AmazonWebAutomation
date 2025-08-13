@@ -2,10 +2,13 @@ package com.amazon.webautomation.Practise;
 
 import java.util.*;
 
+import static com.amazon.webautomation.Practise.practiceString.reverseString;
+
 public class practiceArray {
     public static void main(String[] args){
        // int[] arr = {-1, -10, 1, 1,1,3,4,7,9,1};
         int [] arr = {1,2,4,5,6,7,8};
+        String[] str= {"rajat","kamra","name"};
 //        System.out.println("Reversed: " + Arrays.toString(reverseArray(arr)));
 //        System.out.println("Highest: " + highestElementInArray(arr));
 //        System.out.println("Minimum: " + minimumElementInArray(arr));
@@ -16,6 +19,7 @@ public class practiceArray {
 //       System.out.println("Max Subarray sum :: " + maxSumSubArray(arr));
 //        System.out.println("Move all Zeroes to End :: " + Arrays.toString(moveAllZeroesToEnd(arr)));
 //        System.out.println("Missing number is array is :: " + missingNumber(arr));
+        reverseElementInArray(str);
 
     }
 
@@ -133,7 +137,15 @@ public class practiceArray {
         return expected - actualsum;
     }
 
-    // Finding all pairs in array having target sum
+    // Find all pairs in array having target sum
+    // create empty map: num → index
+    // create empty linked map: firstIndex → secondIndex
+    // for each index i in array:
+    //     calculate complement = target - nums[i]
+    //     if complement exists in map:
+    //         add (map.get(complement), i) to result
+    //     put (nums[i], i) into map
+    // return result map
     public static Map<Integer, Integer> findAllTwoSumPairs(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();        // num → index
         Map<Integer, Integer> result = new LinkedHashMap<>(); // complement index → current index
@@ -247,6 +259,21 @@ public class practiceArray {
                 (open == '{' && close == '}') ||
                 (open == '[' && close == ']');
     }
+
+    // Reverse each element in a String array
+    public static void reverseElementInArray(String[] arr){
+        System.out.println(Arrays.toString(arr));
+        int pos= 0;
+        for(String i : arr ){
+            arr[pos++] = reverseString(i);
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    
+
+
+
 
 
 
