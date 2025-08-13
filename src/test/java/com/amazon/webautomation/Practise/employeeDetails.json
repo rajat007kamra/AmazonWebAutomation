@@ -1,0 +1,41 @@
+{
+  "company": "TechVerse",
+  "location": "Bangalore",
+  "employees": [
+    {
+      "id": 101,
+      "name": "Rajat",
+      "isActive": true,
+      "skills": ["Java", "Selenium", "API"],
+      "address": {
+        "city": "Delhi",
+        "zip": "110001"
+      },
+      "projects": [
+        { "name": "Alpha", "status": "Completed" },
+        { "name": "Beta", "status": "Ongoing" }
+      ]
+    },
+    {
+      "id": 102,
+      "name": "Anjali",
+      "isActive": false,
+      "skills": ["Python", "Robot"],
+      "address": {
+        "city": "Mumbai",
+        "zip": "400001"
+      },
+      "projects": []
+    },
+    {
+      "id": 103,
+      "name": "Karan",
+      "isActive": true,
+      "skills": [],
+      "address": null,
+      "projects": [
+        { "name": "Gamma", "status": "Ongoing" }
+      ]
+    }
+  ]
+}
